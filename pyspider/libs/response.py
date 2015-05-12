@@ -189,6 +189,17 @@ class Response(object):
         except:
             return False
 
+    def body_as_unicode(self):
+        from w3lib.encoding import html_to_unicode, resolve_encoding, \
+    html_body_declared_encoding, http_content_type_encoding
+        """Return body as unicode"""
+        # check for self.encoding before _cached_ubody just in
+        # _body_inferred_encoding is called
+        benc = self.encoding
+        charset = 'charset=%s' % benc
+        self._cached_ubody = html_to_unicode(charset, self.content)[1]
+        return self._cached_ubody
+
 
 def rebuild_response(r):
     response = Response()
