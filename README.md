@@ -1,7 +1,7 @@
 pyspider [![Build Status]][Travis CI] [![Coverage Status]][Coverage] [![Try]][Demo]
 ========
 
-A Powerful Spider(Web Crawler) System in Python. **[TRY IT NOW!][Demo]**
+A Powerful Spider(Web Crawler) System in Python.. **[TRY IT NOW!][Demo]**
 
 - Write script in python with powerful API
 - Python 2&3
